@@ -2,8 +2,7 @@
   <div id="app">
     <h2>Saldo Rekening Bapak : {{ saldoRekening }}</h2>
     <Nasikin 
-    :uangSaku="saldoRekening" 
-    :rezekiSumbangan="duitBuatAbang">
+    :uangSaku="saldoRekening">
     </Nasikin>
     <Zaenal 
     :uangSaku="saldoRekening" 
@@ -22,6 +21,12 @@ export default {
     Nasikin,
     Zaenal
   },
+  data () {
+    return {
+      msg: 'Hello Jack',
+      saldoRekening: 100000
+    }
+  },
   methods: {
     showAlert () {
       alert('HIIIIIIIIIII')
@@ -33,12 +38,6 @@ export default {
     terimaDuit (payloadDuit) {
       console.log('Anak bapak yang soleh habis trf duit sebesar: ', payloadDuit)
       this.saldoRekening += payloadDuit
-    }
-  },
-  data () {
-    return {
-      msg: 'Hello Jack',
-      saldoRekening: 100000
     }
   }
 }

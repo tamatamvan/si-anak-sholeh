@@ -32,14 +32,13 @@ export default {
     },
     terimaDuit (payloadDuit) {
       console.log('Anak bapak yang soleh habis trf duit sebesar: ', payloadDuit)
-      this.duitBuatAbang += payloadDuit
+      this.saldoRekening += payloadDuit
     }
   },
   data () {
     return {
       msg: 'Hello Jack',
-      saldoRekening: 100000,
-      duitBuatAbang: null
+      saldoRekening: 100000
     }
   }
 }
